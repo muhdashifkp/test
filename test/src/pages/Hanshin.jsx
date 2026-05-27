@@ -1,10 +1,11 @@
 import React from 'react'
 
 export default function Hanshin() {
-  return (
+  const name ="hanshin"
+  const age=21
+    return (
     <div>
-      <h1>Hey!</h1>
-      <img src="test/test/benz.jpg" alt="car" />
+       <Child username={name} userage={age}/>
     </div>
   )
 }
