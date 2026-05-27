@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../assets/images'
+import img from '../assets/images/OIP.webp'
 
 const users = [
   {
