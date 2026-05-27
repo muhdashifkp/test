@@ -1,11 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import hero from '../assets/hero.png'
 
 export default function Ashif() {
-  return (
-    <div>
-      <img src={hero}/>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, id illum beatae at doloribus est facilis corporis ipsam, neque sapiente magnam et libero eos provident nemo! Consectetur reiciendis voluptatem quae!</p>
-    </div>
-  )
+    const [state, setState] = useState({ name: "", email: "", password: '' })
+
+    const changeHandle = () => {
+        setState({ ...state, [e.target.name]: e.target.value })
+    }
+
+    return (
+        <div>
+            <h1>Contact</h1>
+            <input type="text" placeholder='name'
+                name="name"
+                onChange={changeHandle} />
+            <input
+                type="text"
+                placeholder='email'
+                name="email"
+                onChange={changeHandle} />
+            <input type="number"
+                placeholder='passWord'
+                name="password"
+                onChange={changeHandle}
+            />
+            <button>
+                Enter
+            </button>
+
+        </div>
+    )
 }
